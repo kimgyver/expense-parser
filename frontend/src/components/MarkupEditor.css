@@ -1,0 +1,23 @@
+.editor-shell .cm-editor {
+  height: 100%;
+  font-size: 0.84rem;
+  background-color: #fbfaf6;
+}
+
+.editor-shell .cm-scroller {
+  font-family: var(--mono);
+  line-height: 1.5;
+}
+
+.editor-shell .cm-content {
+  padding: 0.85rem 0;
+  caret-color: var(--ink);
+}
+
+.editor-shell .cm-editor.cm-focused {
+  outline: none;
+}
+
+.editor-shell .cm-activeLine {
+  background-color: rgba(15, 95, 91, 0.06);
+}

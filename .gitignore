@@ -1,0 +1,27 @@
+# .NET
+**/bin/
+**/obj/
+**/TestResults/
+**/.vs/
+*.user
+*.suo
+*.DotSettings.user
+
+# Node
+**/node_modules/
+**/dist/
+**/dist-ssr/
+**/.vite/
+*.local
+
+# OS / IDE
+.DS_Store
+.idea/
+*.log
+
+# Keep shared VS Code / Cursor workspace config
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/extensions.json
+!.vscode/launch.json

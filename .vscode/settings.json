@@ -1,0 +1,13 @@
+{
+  "dotnet.defaultSolution": "backend/ExpenseParser.sln",
+  "dotnet.server.useOmnisharp": false,
+  "terminal.integrated.env.osx": {
+    "PATH": "/usr/local/share/dotnet:${env:PATH}"
+  },
+  "editor.multiCursorModifier": "alt",
+  "editor.gotoLocation.multiple": "goto",
+  "files.exclude": {
+    "**/bin": true,
+    "**/obj": true
+  }
+}
