@@ -136,6 +136,16 @@ Api stays thin (HTTP + contracts). Domain rules live in Core so they can be test
 
 Keeps parsing rules testable without HTTP. Entry point: `ExpenseParseService`.
 
+## Frontend
+
+React + TypeScript (Vite). UI libs: CodeMirror 6 (markup editor), a JSON viewer for results. Vitest for unit tests.
+
+Paste markup → Submit → show JSON or an error. No parsing rules on the client.
+
+State lives in `ParseFlowProvider` (text, loading/success/error, result). `InputPanel` and `ResultPanel` just read that Context. The editor is controlled (`value` / `onChange`). Submit calls `api/parse.ts`, which POSTs to the API and returns success data or `{ code, message }`.
+
+Extras: sample buttons fill the editor from `samples.ts`; after submit, if you edit the text again an `isStale` hint appears; network failures show a client-side message. Endpoint and debounce sit in `config.ts`.
+
 ## Tests
 
 ```bash
@@ -158,11 +168,6 @@ Vitest covers API result mapping (`parseExpenseText`) and parse-flow state (succ
 - CORS for local Vite
 - `X-Correlation-Id` middleware
 - Structured error codes
-- Sample loaders + stale-input hint (`isStale`) in the UI
-- CodeMirror 6 input editor with XML/markup highlighting
-- JSON viewer for results
-- Parse flow state via React Context (`ParseFlowProvider`) so Input/Result stay presentational
-- Vitest unit tests for API client mapping and parse-flow state
 
 ## Intentionally omitted
 
