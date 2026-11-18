@@ -1,6 +1,6 @@
 # Expense Email Parser
 
-Flowingly take-home: parse marked-up email text, validate tags, and derive GST from a tax-inclusive `<total>`.
+Parse marked-up email text, validate tags, and derive GST from a tax-inclusive `<total>`.
 
 ## Stack
 
